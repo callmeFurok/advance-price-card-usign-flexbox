@@ -74,3 +74,31 @@ body {
     text-decoration: none;
     border-radius: 40px;
 }
+
+
+/*==== MEDIA QUERIES ===============*/
+
+@media screen and (max-width: 426px) {
+    .card {
+        flex-direction: column;
+        background: #f2f2f2;
+    }
+
+    .card__item {
+        width: 90%;
+        margin: 1rem;
+    }
+
+    .card__plan {
+        font-size: 1.5rem;
+    }
+
+    .card__features {
+        font-size: 1.5rem;
+    }
+
+    .card__cta {
+        font-size: 1.8rem;
+    }
+
+}
