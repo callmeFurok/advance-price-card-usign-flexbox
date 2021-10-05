@@ -1,5 +1,76 @@
+/*========== FONTS ===========*/
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+/*============= VARIABLES */
+:root {
+    --color-price: #26293A;
+    --color-features: #494545;
+    --color-boton: #fff;
+
+}
 
 body {
     font-family: 'Roboto', sans-serif;
+}
+
+.card {
+    width: 100%;
+    min-height: 100vh;
+    /*aplicamos flexbox*/
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    /*aplicamos un gradiente hack, para poner un color solo por debajo*/
+    background-image: linear-gradient(360deg, var(--color-price) 50%, #f2f2f2 50%);
+    flex-wrap: wrap;
+}
+
+.card__item {
+    max-width: 350px;
+    width: 30%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+    text-align: center;
+    padding: 40px 0;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.card__item--active {
+    background: #5175ff;
+    /*modificamos las variables solo para este scope*/
+    --color-price: #f2f2f2;
+    --color-features: #f2f2f2;
+    --color-boton: #26293a;
+}
+
+.card__plan {
+    color: var(--color-price);
+    margin-bottom: 20px;
+}
+
+.card__price {
+    font-size: 3rem;
+    color: var(--color-price);
+}
+
+.card__features {
+    color: var(--color-features);
+    margin-bottom: 25px;
+}
+
+.card__features--margin {
+    margin: 30px 0 50px;
+}
+
+.card__cta {
+    margin-top: 50px;
+    display: inline-block;
+    background: var(--color-price);
+    color: var(--color-boton);
+    width: 190px;
+    text-align: center;
+    padding: 20px 0;
+    text-decoration: none;
+    border-radius: 40px;
 }
